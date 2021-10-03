@@ -1,0 +1,13 @@
+$ tsc-watch -onSuccess " node dist/index.js"
+Cannot find module 'typescript/bin/tsc'
+error Command failed with exit code 9. 와 같은 에러 나시는 분들은
+
+(1) npm install -g typescript
+npm link typescript
+
+tsc-watch 오류 이걸로 해결했습니다
+=>
+~typechanin> npm link typescript
+/home/david/typechain/node_modules/typescript -> /home/david/.npm-global/lib/node_modules/typescript
+
+(2) npm i -D @types/node typescript ts-node 로 해결하시면 됩니다
